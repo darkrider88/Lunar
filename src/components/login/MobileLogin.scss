@@ -8,7 +8,6 @@
 
 .container__outer {
   font-family: "Nunito Sans";
-  display: -ms-grid;
   display: grid;
   place-items: center;
   height: 90%;
@@ -20,38 +19,20 @@
   height: 95%;
   width: 85%;
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(36px);
-          backdrop-filter: blur(36px);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  backdrop-filter: blur(36px);
   display: flex;
   color: white;
   padding: 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container__inner__logo {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  user-select: none;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .conatiner__inner__welcome {
   margin-top: 50px;
   margin-bottom: 30px;
@@ -68,7 +49,6 @@
 .conatiner__inner__button {
   margin-bottom: 10px;
 }
-
 .conatiner__inner__button > button {
   color: rgba(255, 255, 255, 0.842);
   background-color: transparent;
@@ -78,7 +58,6 @@
   padding: 10px;
   font-weight: 600;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -95,31 +74,17 @@
   color: rgba(255, 255, 255, 0.616);
   line-height: 1.5;
   cursor: default;
-  -webkit-animation: slide2 0.5s ease;
-          animation: slide2 0.5s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  animation: slide2 0.5s ease;
+  user-select: none;
 }
 
 .hide {
   opacity: 0;
   overflow: hidden;
-  -webkit-animation: slide 0.5s ease;
-          animation: slide 0.5s ease;
+
+  animation: slide 0.5s ease;
   /* animation-iteration-count: 1; */
 }
-
-@-webkit-keyframes slide {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 @keyframes slide {
   from {
     opacity: 1;
@@ -128,16 +93,6 @@
     opacity: 0;
   }
 }
-
-@-webkit-keyframes slide2 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes slide2 {
   from {
     opacity: 0;
@@ -152,4 +107,3 @@
   bottom: 15px;
   color: rgba(255, 255, 255, 0.438);
 }
-/*# sourceMappingURL=MobileLogin.css.map */

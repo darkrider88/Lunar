@@ -1,30 +1,28 @@
 import "./App.css";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login, logout } from "./redux/actions/auth.action";
 import { useSelector } from "react-redux";
+import DesktopLogin from "./components/login/DesktopLogin";
+import MobileLogin from "./components/login/MobileLogin";
 
+// getting the width of window, to render the login screen
+const width = window.innerWidth;
 function App() {
   const loggedIn = useSelector((state) => state.auth.accessToken);
   const dispatch = useDispatch();
-  const handleLogin = () => {
-    dispatch(login());
-  };
   const handleLogout = () => {
     dispatch(logout());
   };
+
+  const theme = "dark";
   return (
-    <div className="App">
+    <div className={theme === "dark" ? "App dark" : "App light"}>
       {loggedIn ? (
-        <div>
-          <h1>hello world</h1>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
+        <div> hello welcome</div>
+      ) : width > 480 ? (
+        <DesktopLogin />
       ) : (
-        <div>
-          <h1>Please log in</h1>
-          <button onClick={handleLogin}>Login</button>
-        </div>
+        <MobileLogin />
       )}
     </div>
   );
