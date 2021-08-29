@@ -1,8 +1,11 @@
 .main {
-  background: url("./dark.jpg") no-repeat;
+  /*background: url("./dark.jpg") no-repeat;
   height: 100vh;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
-/*# sourceMappingURL=main.css.map */
+
+/* .main__sidebar{
+  margin-top: 20px;
+} */

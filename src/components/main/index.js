@@ -4,7 +4,9 @@ import "./main.css";
 export function Main() {
   return (
     <div className="main">
-      <Sidebar />
+      {/* <div className="main__sidebar"> */}
+        <Sidebar />
+      {/* </div> */}
     </div>
   );
 }

@@ -24,6 +24,7 @@ function Favourite({ name }) {
 
 function Sidebar() {
   return (
+    
     <div className="sidebar">
       <div className="sidebar__top">
         <div className="sidebar__top__mobile">
@@ -78,6 +79,7 @@ function Sidebar() {
         </div>
       </div>
     </div>
+    
   );
 }
 
