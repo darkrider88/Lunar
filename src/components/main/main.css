@@ -9,3 +9,11 @@
 /* .main__sidebar{
   margin-top: 20px;
 } */
+
+body{
+  background: url("./dark.jpg");
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}

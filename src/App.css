@@ -6,16 +6,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.App{
-  background: url("./components/main/dark.jpg");
-  /* background-color: yellow; */
-  height: 100vh;
-   background-position: center;
-  background-size: cover;
-   background-attachment: fixed;
-}
+
 .dark {
-  --overlay-color: rgba(27, 27, 27, 0.411);
+  --overlay-color: rgba(104, 104, 104, 0.301);
+  --hover-color: rgba(0, 0, 0, 0.239);
   --font-normal: rgb(255, 255, 255);
   --font-light: rgba(236, 236, 236, 0.568);
   --bg-image: "./dark.jpg";
