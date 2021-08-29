@@ -7,6 +7,8 @@ import VideocamIcon from "@material-ui/icons/Videocam";
 import ClearIcon from "@material-ui/icons/Clear";
 import ThemeSwitch from "../themeSwitch";
 import IconButton from "@material-ui/core/IconButton";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 
 function Favourite({ name }) {
   return (
@@ -41,6 +43,14 @@ function Sidebar() {
         </div>
         <div className="sidebar__top__logo">
           <h1>Lunar</h1>
+          <PlayArrowIcon
+            style={{
+              color: "#b108ff",
+              height: "40px",
+              width: "40px",
+              marginTop: "10px",
+            }}
+          />
         </div>
       </div>
 
@@ -57,6 +67,10 @@ function Sidebar() {
           <div className="sidebar__body__links__subscription link_hover">
             <VideocamIcon />
             <p className="sidebar__body__links__text">Subscription</p>
+          </div>
+          <div className="sidebar__body__links__feed link_hover">
+            <PhotoLibraryIcon />
+            <p className="sidebar__body__links__text">Feed</p>
           </div>
         </div>
 
