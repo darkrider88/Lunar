@@ -8,6 +8,6 @@ This webApp is built using YouTubeAPI.
 
 ## Screenshot
 
-Homepage
+Below is the screenshot of UI component of Homepage
 
 ![](./images/home.png)
