@@ -6,6 +6,19 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.App{
+  font-family: 'Nunito sans';
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: var(--selection-font-color);
+  background: var(--selection-bgcolor);
+}
+
+::selection {
+  color:var(--selection-font-color);
+  background: var(--selection-bgcolor);
+}
 
 .dark {
   --overlay-color: rgba(104, 104, 104, 0.301);
@@ -13,6 +26,8 @@
   --font-normal: rgb(255, 255, 255);
   --font-light:rgba(236, 236, 236, 0.877);
   --font-lighter: rgba(236, 236, 236, 0.568);
+  --selection-font-color:rgb(255, 255, 255);
+  --selection-bgcolor: #b108ff;
   --bg-image: "./dark.jpg";
 }
 
