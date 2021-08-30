@@ -1,0 +1,62 @@
+
+.videoCard {
+  padding-top: 10px;
+  background-color: var(--overlay-color);
+  height: 258px;
+  width: 248px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.videoCard:hover{
+  transform: scale(1.08);
+}
+.videoCard__thumbnail {
+  padding-top: 12px;
+  padding-bottom: 15px;
+  height: 137px;
+  width: 200px;
+}
+
+.videoCard__thumbnail > img {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.videoCard__info {
+  display: flex;
+  margin: 0 20px;
+}
+
+.videoCard__info__channelImg {
+  margin-right: 10px;
+  padding-top:3px;
+}
+.videoCard__info__text__videoTitle {
+  font-size: 0.9em;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.videoCard__info__channelImg > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.videoCard__info__text__lower__channelName {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.74);
+  margin-bottom: 4px;
+}
+
+.videoCard__info__text__lower__views {
+  font-size: 0.76em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.74);
+}

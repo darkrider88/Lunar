@@ -11,7 +11,7 @@ function Header (props) {
                 <SearchIcon style={{color:focus?'var(--font-light)':'var(--font-lighter)'}}/>
                 <input onBlur={() => setFocus(false)} onFocus={() => setFocus(true)} type='text' placeholder="Search your fantasies..."/>
             </div>
-            <div className="header__themeSwitch">
+            <div  className="header__themeSwitch">
                 <ThemeSwitch/>
             </div>
             <div className="header__avatar">

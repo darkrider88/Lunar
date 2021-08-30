@@ -8,6 +8,7 @@
 
 .App{
   font-family: 'Nunito sans';
+  color: var(--font-normal);
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -37,3 +38,5 @@
   --font-light: rgba(236, 236, 236, 0.568);
   --bg-image: "./light.jpg";
 }
+
+
