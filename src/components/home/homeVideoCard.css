@@ -11,7 +11,7 @@
   transition: all 0.2s ease;
 }
 .videoCard:hover{
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 .videoCard__thumbnail {
   padding-top: 12px;

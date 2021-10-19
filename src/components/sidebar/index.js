@@ -9,6 +9,9 @@ import ThemeSwitch from "../themeSwitch";
 import IconButton from "@material-ui/core/IconButton";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+import { useSelector } from "react-redux";
+import { sidebarClose} from '../../redux/actions/sidebar.action'
+import { useDispatch } from "react-redux";
 
 function Favourite({ name }) {
   return (
@@ -25,9 +28,17 @@ function Favourite({ name }) {
 }
 
 function Sidebar() {
+  const mobileSidebarActive = useSelector((state) => state.sidebar.isActive);
+  const dispatch = useDispatch();
+    const handleSidebar = () =>{
+        
+            dispatch(sidebarClose())
+        
+    }
+
   return (
     
-    <div className="sidebar">
+    <div className={mobileSidebarActive?"sidebar":"sidebar hideSidebar"}>
       <div className="sidebar__top">
         <div className="sidebar__top__mobile">
           <div className="sidebar__switch">
@@ -37,6 +48,7 @@ function Sidebar() {
             <IconButton>
               <ClearIcon
                 style={{ width: "30px", height: "30px", color: "white" }}
+                onClick={handleSidebar}
               />
             </IconButton>
           </div>
@@ -62,11 +74,11 @@ function Sidebar() {
           </div>
           <div className="sidebar__body__links__trending link_hover">
             <TrendingUpIcon />
-            <p className="sidebar__body__links__text">Trending</p>
+            <p className="sidebar__body__links__text">Popular</p>
           </div>
           <div className="sidebar__body__links__subscription link_hover">
             <VideocamIcon />
-            <p className="sidebar__body__links__text">Subscription</p>
+            <p className="sidebar__body__links__text">Favourites</p>
           </div>
           <div className="sidebar__body__links__feed link_hover">
             <PhotoLibraryIcon />

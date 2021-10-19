@@ -3,3 +3,5 @@ export const LOGIN_FAILED = "LOGIN_FAIEDL";
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGOUT = "LOGOUT";
 export const LOAD_PROFILE = "LOAD_PROFILE";
+export const SIDEBAR_OPEN = "SIDEBAR_OPEN"
+export const SIDEBAR_CLOSE = "SIDEBAR_CLOSE"

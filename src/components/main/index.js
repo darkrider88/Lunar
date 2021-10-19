@@ -4,20 +4,22 @@ import "./main.css";
 import Header from "../header";
 import Home from '../home'
 import { Switch, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 
 export function Main() {
+  const mobileSidebarActive = useSelector((state) => state.sidebar.isActive);
   return (
     <div className="main">
         {/* <Sidebar /> */}
-        <div className="main__sidebar box">
+        <div className="main__sidebar ">
           <Sidebar />
         </div>
-        <div className="main__header box">
+        <div className={mobileSidebarActive?"sidebar_background_hide":"main__header"}>
           <Header avatar = {"https://png.pngtree.com/png-vector/20200614/ourlarge/pngtree-businessman-user-avatar-character-vector-illustration-png-image_2242909.jpg"} />
         </div>
-        <div className="main__area box">
+        <div className={mobileSidebarActive?"sidebar_background_hide":"main__area "}>
           <Switch>
             <Route path='/' exact component={Home} ></Route>
             {/* <Route path='/search' component={Search} ></Route>

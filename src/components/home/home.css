@@ -8,6 +8,11 @@
     font-weight: 500;
 }
 
+@media (max-width: 768px){
+    .home__heading{
+        padding-left: 20px;
+    }
+}
 
 .home__videoContainer {
     margin-top: 30px;
