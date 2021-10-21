@@ -2,15 +2,15 @@ import "./sidebar.css";
 import EllipsisText from "react-ellipsis-text";
 import HomeIcon from "@material-ui/icons/Home";
 import TrendingUpIcon from "@material-ui/icons/TrendingUp";
-
+import { Link } from "react-router-dom";
 import VideocamIcon from "@material-ui/icons/Videocam";
 import ClearIcon from "@material-ui/icons/Clear";
 import ThemeSwitch from "../themeSwitch";
 import IconButton from "@material-ui/core/IconButton";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import { useSelector } from "react-redux";
-import { sidebarClose} from '../../redux/actions/sidebar.action'
+import { sidebarClose } from "../../redux/actions/sidebar.action";
 import { useDispatch } from "react-redux";
 
 function Favourite({ name }) {
@@ -30,25 +30,21 @@ function Favourite({ name }) {
 function Sidebar() {
   const mobileSidebarActive = useSelector((state) => state.sidebar.isActive);
   const dispatch = useDispatch();
-    const handleSidebar = () =>{
-        
-            dispatch(sidebarClose())
-        
-    }
+  const handleSidebar = () => {
+    dispatch(sidebarClose());
+  };
 
   return (
-    
-    <div className={mobileSidebarActive?"sidebar":"sidebar hideSidebar"}>
+    <div className={mobileSidebarActive ? "sidebar" : "sidebar hideSidebar"}>
       <div className="sidebar__top">
         <div className="sidebar__top__mobile">
           <div className="sidebar__switch">
             <ThemeSwitch />
           </div>
           <div className="sidebar__close">
-            <IconButton>
+            <IconButton onClick={handleSidebar}>
               <ClearIcon
                 style={{ width: "30px", height: "30px", color: "white" }}
-                onClick={handleSidebar}
               />
             </IconButton>
           </div>
@@ -68,22 +64,30 @@ function Sidebar() {
 
       <div className="sidebar__body">
         <div className="sidebar__body__links">
-          <div className="sidebar__body__links__home link_hover">
-            <HomeIcon />
-            <p className="sidebar__body__links__text">Home</p>
-          </div>
-          <div className="sidebar__body__links__trending link_hover">
-            <TrendingUpIcon />
-            <p className="sidebar__body__links__text">Popular</p>
-          </div>
-          <div className="sidebar__body__links__subscription link_hover">
-            <VideocamIcon />
-            <p className="sidebar__body__links__text">Favourites</p>
-          </div>
-          <div className="sidebar__body__links__feed link_hover">
-            <PhotoLibraryIcon />
-            <p className="sidebar__body__links__text">Feed</p>
-          </div>
+          <Link to="/">
+            <div className="sidebar__body__links__home link_hover">
+              <HomeIcon />
+              <p className="sidebar__body__links__text">Home</p>
+            </div>
+          </Link>
+          <Link to="/search">
+            <div className="sidebar__body__links__trending link_hover">
+              <TrendingUpIcon />
+              <p className="sidebar__body__links__text">Popular</p>
+            </div>
+          </Link>
+          <Link to="/favourites">
+            <div className="sidebar__body__links__subscription link_hover">
+              <VideocamIcon />
+              <p className="sidebar__body__links__text">Favourites</p>
+            </div>
+          </Link>
+          <Link to="/">
+            <div className="sidebar__body__links__feed link_hover">
+              <PhotoLibraryIcon />
+              <p className="sidebar__body__links__text">Feed</p>
+            </div>
+          </Link>
         </div>
 
         <div className="sidebar__body__fav">
@@ -105,7 +109,6 @@ function Sidebar() {
         </div>
       </div>
     </div>
-    
   );
 }
 

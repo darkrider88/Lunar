@@ -4,8 +4,16 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
+img{
+  user-select: none;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
 .App{
   font-family: 'Nunito sans';
   color: var(--font-normal);
@@ -22,13 +30,15 @@
 }
 
 .dark {
+  --main-color:rgb(177, 8, 255);
   --overlay-color: rgba(104, 104, 104, 0.301);
   --hover-color: rgba(0, 0, 0, 0.239);
+  --card-hover-color:rgba(255, 255, 255, 0.199);
   --font-normal: rgb(255, 255, 255);
-  --font-light:rgba(236, 236, 236, 0.877);
+  --font-light:rgba(236, 236, 236, 0.877);  
   --font-lighter: rgba(236, 236, 236, 0.568);
   --selection-font-color:rgb(255, 255, 255);
-  --selection-bgcolor: #b108ff;
+  --selection-bgcolor: #b638f150;
   --bg-image: "./dark.jpg";
 }
 

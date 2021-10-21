@@ -2,7 +2,7 @@
 .header_mobile {
     height: 50px;
     background-color: var(--overlay-color);
-    margin: 20px;
+    margin: 10px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -41,6 +41,7 @@
     display: flex;
     width: 100%;
     padding-left: 20px;
+    padding-right: 20px;
   }
   .search-input_mobile {
     /* background-color: lightblue; */

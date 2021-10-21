@@ -1,0 +1,76 @@
+
+.favourites{
+
+}
+
+.favourites__heading{
+    border-bottom: 1px solid rgba(158, 158, 158, 0.274);
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.favouriteCard__container{
+    margin-top: 20px;
+    display: grid;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+  
+}
+@media (max-width: 780px){
+    .favouriteCard__container{
+        justify-items: center;
+        align-items: center;
+        align-self: center;
+    }
+}
+.favouriteCard{
+    background-color: var(--overlay-color);
+    width:240px;
+    /* min-height: 250px; */
+    height: 300px;
+    padding:15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s ease;
+
+}
+.favouriteCard:hover{
+    background-color: var(--card-hover-color)
+  
+}
+.favouriteCard__thumbnail{
+    height: 150px;
+    width: 150px;
+}
+
+.favouriteCard__thumbnail > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.favouriteCard__name{
+    color: var(--font-normal);
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.favouriteCard__favs{
+    margin-top: 5px;
+    color: var(--font-light);
+    font-size: 0.9em;
+}
+
+.favouriteCard__added{
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.226);
+    padding:4px 18px;
+    border-radius: 20px;
+    color:var(--font-light);
+    font-size: 0.9em;
+}

@@ -13,7 +13,7 @@ body{
   display: grid;
   grid-gap: 10px;
   column-gap: 40px;
-  row-gap: 40px;
+  row-gap: 20px;
   grid-template-columns: 300px;
   grid-template-rows: 80px;
  
@@ -39,15 +39,22 @@ body{
   grid-row: 2 / 4;
   overflow-y:scroll;
   padding-bottom: 50px;
+  padding-right: 60px;
+  
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .main{
     justify-content: center;
     display: block;
   }
   .sidebar_background_hide{
     display: none;
+  }
+  .main__area{
+    margin-top:40px;  
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
