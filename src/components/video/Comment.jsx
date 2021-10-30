@@ -1,6 +1,6 @@
 import React from 'react'
 import Avatar from '@mui/material/Avatar';
-import DOMPurify from 'dompurify'
+// import DOMPurify from 'dompurify'
 export function AddComment(props){
     return(
         <div className="addcomment__container">

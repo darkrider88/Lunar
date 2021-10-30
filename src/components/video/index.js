@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useLocation } from "react-router";
 import "./video.css";
 import { AddComment, DisplayComment } from "./Comment";
@@ -11,6 +11,7 @@ const useQuery = () => {
 function Video() {
   let query = useQuery();
   let term = query.get("videoId");
+  console.log(term);
   return (
     <div className="video">
       <Player />
@@ -20,8 +21,12 @@ function Video() {
         <div className="comment__heading">
           <h2>Comments</h2>
         </div>
-        <AddComment/>
-        <DisplayComment username="Shashwat Pandey" timestamp="4 hours ago" comment="Binod"/>
+        <AddComment />
+        <DisplayComment
+          username="Shashwat Pandey"
+          timestamp="4 hours ago"
+          comment="Binod"
+        />
       </div>
       {/* Related Videos */}
       <div className="relatedVideos__container">
@@ -42,7 +47,6 @@ function Video() {
     </div>
   );
 }
-
 
 const data = {
   title: "K'NAAN-Wavin' Flag (Coca-Cola Celebration Remix)",

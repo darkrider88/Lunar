@@ -13,7 +13,7 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import { useSelector } from "react-redux";
 import { sidebarClose } from "../../redux/actions/sidebar.action";
 import { useDispatch } from "react-redux";
-import {useHistory} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 function Favourite({ name }) {
   return (
     <div className="sidebar__body__fav__inner__img__text link_hover">
@@ -35,13 +35,13 @@ function Sidebar() {
     dispatch(sidebarClose());
   };
 
-  const history = useHistory() 
+  const history = useHistory();
 
-   useEffect(() => {
-      return history.listen((location) => { 
-         dispatch(sidebarClose());
-      }) 
-   },[history])
+  useEffect(() => {
+    return history.listen((location) => {
+      dispatch(sidebarClose());
+    });
+  }, [history, dispatch]);
 
   return (
     <div className={mobileSidebarActive ? "sidebar" : "sidebar hideSidebar"}>

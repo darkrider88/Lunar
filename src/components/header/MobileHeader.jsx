@@ -6,7 +6,6 @@ import ClearIcon from "@material-ui/icons/Clear";
 import { useState, useRef, useEffect } from "react";
 import { sidebarOpen } from "../../redux/actions/sidebar.action";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import DropdownProfile from "./DropdownProfile";
 import "./mobileHeader.css";
 import { useHistory } from 'react-router-dom'
@@ -24,7 +23,7 @@ function MobileHeader() {
   }, [showSearch]);
 
   // open sidebar onClick
-  const active = useSelector((state) => state.sidebar.isActive);
+  // const active = useSelector((state) => state.sidebar.isActive);
   const dispatch = useDispatch();
   const handleSidebar = () => {
     dispatch(sidebarOpen());

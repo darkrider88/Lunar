@@ -1,6 +1,6 @@
 import React from "react";
 import "./searchCard.css";
-import { EllipsisText } from "react-ellipsis-text";
+
 function SearchCard(props) {
   return (
     <div className="searchCard">

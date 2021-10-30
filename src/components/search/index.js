@@ -11,7 +11,7 @@ function Search() {
   let query = useQuery();
 
   let term = query.get("searchTerm");
-
+  console.log(term);
   return (
     <div className="search">
       <div className="search__heading">
