@@ -31,6 +31,7 @@ a{
 
 .dark {
   --main-color:rgb(177, 8, 255);
+  --main-hover-color:rgba(177, 8, 255, 0.651);
   --overlay-color: rgba(104, 104, 104, 0.301);
   --hover-color: rgba(0, 0, 0, 0.239);
   --card-hover-color:rgba(255, 255, 255, 0.199);

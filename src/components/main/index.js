@@ -5,6 +5,7 @@ import Header from "../header";
 import Home from "../home";
 import Search from "../search";
 import Favourites from "../favourites";
+import Profile from '../profile'
 import { Switch, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Video from "../video";
@@ -37,6 +38,7 @@ export function Main() {
           <Route path="/search" component={Search}></Route>
           <Route path="/favourites" component={Favourites}></Route>
           <Route path="/video" component={Video}></Route>
+          <Route path="/profile" component={Profile}></Route>
         </Switch>
       </div>
     </div>

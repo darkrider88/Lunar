@@ -1,4 +1,5 @@
 import "./sidebar.css";
+import { useEffect } from "react";
 import EllipsisText from "react-ellipsis-text";
 import HomeIcon from "@material-ui/icons/Home";
 import TrendingUpIcon from "@material-ui/icons/TrendingUp";
@@ -12,7 +13,7 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import { useSelector } from "react-redux";
 import { sidebarClose } from "../../redux/actions/sidebar.action";
 import { useDispatch } from "react-redux";
-
+import {useHistory} from 'react-router-dom'
 function Favourite({ name }) {
   return (
     <div className="sidebar__body__fav__inner__img__text link_hover">
@@ -33,6 +34,14 @@ function Sidebar() {
   const handleSidebar = () => {
     dispatch(sidebarClose());
   };
+
+  const history = useHistory() 
+
+   useEffect(() => {
+      return history.listen((location) => { 
+         dispatch(sidebarClose());
+      }) 
+   },[history])
 
   return (
     <div className={mobileSidebarActive ? "sidebar" : "sidebar hideSidebar"}>

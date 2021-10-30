@@ -7,10 +7,13 @@ import { useState, useRef, useEffect } from "react";
 import { sidebarOpen } from "../../redux/actions/sidebar.action";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import DropdownProfile from "./DropdownProfile";
 import "./mobileHeader.css";
+import { useHistory } from 'react-router-dom'
 
 function MobileHeader() {
   const [showSearch, setShowSearch] = useState(false);
+  const [dropdown,setDropdown] = useState(false);
 
   // autofucs the search input
   const searchInput = useRef(null);
@@ -26,6 +29,20 @@ function MobileHeader() {
   const handleSidebar = () => {
     dispatch(sidebarOpen());
   };
+
+   // activate dropdown on click
+   const handleDropdown = () =>{
+    dropdown? setDropdown(false):setDropdown(true);
+  }
+
+  // detecting url change to close the dropdown when page is changed
+  const history = useHistory() 
+
+   useEffect(() => {
+      return history.listen((location) => { 
+         setDropdown(false)
+      }) 
+   },[history])
 
   return (
     <div>
@@ -48,10 +65,13 @@ function MobileHeader() {
                 style={{ color: "white", height: "28px", width: "28px" }}
               />
             </IconButton>
+            <IconButton onClick={handleDropdown}>
             <AccountCircleIcon
               style={{ color: "white", height: "35px", width: "35px" }}
             />
+            </IconButton>
           </div>
+          <DropdownProfile isActive={dropdown}/>
         </div>
         <div className={`header-search_mobile ${showSearch ? "" : "hide"}`}>
           <SearchIcon

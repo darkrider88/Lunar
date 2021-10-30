@@ -47,7 +47,7 @@ function Player() {
               </p>
             </div>
             <div className="video__details__left__channel">
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex",alignItems:"center"}}>
                 <div className="video__details__left__channel__avatar">
                   <img
                     src="https://cdn.pixabay.com/photo/2021/09/28/05/05/bird-6663217__340.jpg"
@@ -58,13 +58,13 @@ function Player() {
                   <p>Sample Channel Name</p>
                 </div>
               </div>
-              <div className="video__details__left__channel__button">
+              
                 <div
                   className={fav ? "subscribe_btn" : "subscribe_btn bg-purple"}
                   onClick={handleFav}
                 >
                   {fav ? "Added" : "Favourite"}
-                </div>
+                
               </div>
             </div>
           </div>
