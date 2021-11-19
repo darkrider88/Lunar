@@ -1,6 +1,6 @@
 # Lunar - Video Streaming service using Reactjs
 
-Made by: Shashwat(me), [Priyanshi Meghwani](https://github.com/priyanshi23meghwani)
+Made by: Shashwat(me), [Priyanshi Meghwani](https://github.com/priyanshi23meghwani) and [Saumya Singh](https://github.com/saumyaseek)
 This is our final year project which is still under construction.
 
 In this WebApp we could search and play videos. 
